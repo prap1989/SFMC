@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL2023</title>
+    <link rel="stylesheet" href="style.css" >
+    <style>
+        .red-button{ 
+            background-color: red;
+            color: white;
+            border: none;
+        }
+        .yellow-button{
+            background-color: yellow;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <p> This is sample page <button title="clickme" onclick="alert('why are you touching me?')" class="red-button">TouchMe</button> please</p>
+
+    <button onclick="console.log(`Cart quantity: ${cartQuantity}`)">Show Quantity</button>
+
+    <button onclick="
+    cartQuantity += 1;console.log(`Cart quantity: ${cartQuantity}`);">Add to Cart</button>
+
+    <button onclick="
+    cartQuantity += 2;console.log(`Cart quantity: ${cartQuantity}`);">+2</button>
+
+    <button onclick="
+    cartQuantity += 3;console.log(`Cart quantity: ${cartQuantity}`);">+3</button>
+
+    <button onclick=" cartQuantity = 0; console.log('Cart was Reset');console.log(`Cart quantity: ${cartQuantity}`);">Reset Cart</button>
+
+    <script scr="index.js">
+        //alert("not so cool");
+        /*  any comment goes here */
+        let cartQuantity = 0;
+        let variable1 = 0;
+        console.log(variable1);
+        variable1 = variable1 + 3;
+        console.log(variable1);
+        const variable2 =  5;
+        var variable3 = 3;
+        const message = 'Hello';
+        console.log(typeof message);
+        console.log(3>5);
+        console.log(5 == '5.00');
+        console.log( 5 === '5.00');
+        const result = 0 ? 'truthy' : 'falsy';
+        console.log(result);
+
+        if(true){
+            console.log('correct Data');
+
+        }
+        else{
+            console.log('bad data');
+        }
+    </script>
+    
+</body>
+</html>

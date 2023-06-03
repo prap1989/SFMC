@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom-Projects</title>
+</head>
+<body>
+    <p>Please subscribe below!</p>
+    <button onclick="subscribed();" class="js-button"  >Subscribe</button>
+
+    <p>Rock Paper Scissors</p>
+    <a href="NewGame.html"><u>Click here</u></a>
+
+    <p>Amazon shipping calculator</p>
+    <input  class="js-input" placeholder="Cost of order" onkeydown="handleCostKey(event);">
+    <button onclick=calculateTotal();>claculate</button>
+    <p class="js-totalCost"></p>
+
+    <script>
+       
+       function handleCostKey(event)
+       {
+        if(event.key === 'Enter')
+        {
+            calculateTotal();
+        }
+       }
+
+       function calculateTotal()
+       {
+        const inputElement = document.querySelector('.js-input');
+        let cost = Number(inputElement.value);
+        if(cost<40)
+        {
+            cost += 10;
+        }
+        document.querySelector('.js-totalCost').innerHTML = `$${cost}`;
+       }
+
+       const buttonElement= document.querySelector('.js-button');
+       function subscribed()
+       {
+        
+        if(buttonElement.innerText === 'Subscribe')
+        {
+            buttonElement.innerHTML = 'Subscribed';
+       }
+       else 
+       {
+        buttonElement.innerHTML = 'Subscribe';
+       }
+    }
+    </script>
+</body>
+</html>
